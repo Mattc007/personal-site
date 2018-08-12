@@ -1,37 +1,21 @@
-/*.primary-color {
-  color: #F13718;
+.main {
+  margin: 0 auto;
+  max-width: 720px;
+  padding: 40px;
+
+  @media screen and (max-width: 1200px) {
+    margin: 0;
+  }
 }
 
-::selection {
-  color: white;
-  background: #F13718;
-}
-
-a {
-  color: #F13718;
-  font-weight: 500;
-  transition: ease all .5s;
+a.header__link {
+  color: #f9145f;
+  border-bottom: none;
   text-decoration: none;
-  border-bottom: 1px solid #F13718;
+  text-shadow: none;
+  background: none;
 }
 
-a:hover, a:focus {
-  color: inherit;
-  border-bottom-width: 1px;
-  border-bottom-color: inherit;
-  border-bottom-style: dotted;
+a.header__link:hover {
+  text-decoration: underline;
 }
-
-a.footer__link,
-a.footer__link:hover,
-a.footer__link:focus {
-  border-bottom: none;
-}
-
-a.header__link,
-a.header__link:hover,
-a.header__link:focus {
-  border-bottom: none;
-}
-
-*/

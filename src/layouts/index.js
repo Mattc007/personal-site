@@ -2,7 +2,6 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 
-import Sidebar from '../components/Sidebar'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import './styles.css'
@@ -16,11 +15,7 @@ const TemplateWrapper = ({ children }) => (
         { name: 'keywords', content: 'catrett, developer, product, louisiana' },
       ]}
     />
-    <div style={{
-      margin: '0 auto',
-      maxWidth: 720,
-      padding: '2rem'
-    }}>
+    <div className="main">
       <Header />
       <div>
         {children()}

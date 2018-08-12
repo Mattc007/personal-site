@@ -1,23 +1,24 @@
 import React from 'react'
 import Link from 'gatsby-link'
 
-const PostNavItem = ({ label, title, slug }) =>
+const PostNavItem = ({ label, title, slug }) => (
+  <div
+    style={{ margin: '15px 0' }}
+  >
     <div
-      style={{ margin: '15px 0' }}
+      style={{ textTransform: 'uppercase',
+               color: '#aaa',
+               fontSize: '13px'  }}
     >
-      <div
-        style={{ textTransform: 'uppercase',
-                 color: '#aaa',
-                 fontSize: '13px'  }}
-      >
-        {label}
-      </div>
-  <Link to={slug}>
-      {title}
-  </Link>
+      {label}
     </div>
+    <Link to={slug}>
+        {title}
+    </Link>
+  </div>
+)
 
-const PostNav = ({ previous, next }) =>
+const PostNav = ({ previous, next }) => (
   <div style={{ margin: '80px 0'}}>
     {previous &&
       <PostNavItem
@@ -34,6 +35,7 @@ const PostNav = ({ previous, next }) =>
       />
     }
   </div>
+)
 
 export default ({ data, pathContext }) => {
   const post = data.markdownRemark

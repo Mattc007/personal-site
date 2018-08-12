@@ -8,7 +8,6 @@ export default ({ data }) => {
         id="about-me"
         style={{
           border: '1px solid #eee',
-          // background: '#eee',
           padding: '15px 10px 0'
         }}
       >
@@ -26,9 +25,7 @@ export default ({ data }) => {
         {data.allMarkdownRemark.edges.map(({ node }) =>
           <div key={node.id}>
             <h3>
-              <Link
-                to={node.fields.slug}
-              >
+              <Link to={node.fields.slug}>
                 {node.frontmatter.title}
               </Link>
               <span
